@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div id="function"></div>
+        <p>Count=<span id="number">0</span></p>
+        <div >
+            <button id="click" onclick="increase()">Click</button>
+            <button id="reset" onclick="clear()">Reset</button>
+            <button id="red" onclick="turnRed()">Red</button>
+            <button id="blue" onclick="turnBlue()">Blue</button>
+        </div>
+    </div>
+</body>
+
+<script>
+     var countNum = document.getElementById("number");
+    function increase(){
+       
+        var increaseNumber = document.getElementById("number").value;
+         increaseNumber += 1;
+         countNum.innerHTML = increaseNumber;
+    }
+
+    function clear(){
+        countNum.innerHTML="0";
+    }
+</script>
+</html>
