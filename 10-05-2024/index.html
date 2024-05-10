@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="password">
+        <h1>Password Strength Indicator</h1>
+        <input type="password" placeholder="Type password" id="pass" >
+        <div class="result">
+            <div>
+
+            </div>
+            <p id="pass-result">
+
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        var password = document.getElementById("pass").value;
+        var passResult = document.getElementById("pass-result");
+        if(password.length === 0){
+            passResult.innerHTML = "";
+        }
+        if(password.length<=4){
+            passResult.innerHTML = "Your password is weak";
+        }
+        if(password.length >= 4  && password.length <=8){
+            passResult.innerHTML = "Your Password is Strong";
+        }
+        
+
+    </script>
+</body>
+</html>
